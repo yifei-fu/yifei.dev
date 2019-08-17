@@ -4,10 +4,13 @@ import Typography from '@material-ui/core/Typography';
 import DateRangeIcon from '@material-ui/icons/DateRange';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import React from 'react';
+import {cardBorderRadius, cardShadowSize} from './theme';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     margin: 15,
+    borderRadius: cardBorderRadius,
+    boxShadow: theme.shadows[cardShadowSize],
   },
   header: {
     display: 'flex',

@@ -9,7 +9,6 @@ const useStyles = makeStyles({
     marginLeft: 'auto',
     marginRight: 'auto',
     width: '90vw',
-    borderRadius: 10,
   },
   document: {
     height: '85vh',

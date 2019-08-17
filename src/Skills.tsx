@@ -10,11 +10,15 @@ import {makeStyles} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import React from 'react';
 import Section from './Section';
+import {bodyFontFamily, cardBorderRadius, cardShadowSize} from './theme';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 600,
-    borderRadius: 10,
+  },
+  card: {
+    borderRadius: cardBorderRadius,
+    boxShadow: theme.shadows[cardShadowSize],
   },
   document: {
     height: '85vh',
@@ -55,11 +59,11 @@ const Skills: React.FC = () => {
 
   return (
     <Section className={classes.root} title='Skills'>
-      <Card>
+      <Card className={classes.card}>
         <CardContent>
           <List className={classes.root}>
             {renderListItem(
-              <Avatar alt='Lambda' style={{fontSize: '2rem'}}>
+              <Avatar alt='Lambda' style={{fontSize: '2rem', fontFamily: bodyFontFamily}}>
                 λ
               </Avatar>,
               'Programming Languages',

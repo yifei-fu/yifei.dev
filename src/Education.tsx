@@ -9,7 +9,6 @@ import Section from './Section';
 const useStyles = makeStyles({
   root: {
     maxWidth: 800,
-    borderRadius: 10,
   },
   document: {
     height: '85vh',

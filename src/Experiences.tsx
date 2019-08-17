@@ -9,7 +9,6 @@ import Section from './Section';
 const useStyles = makeStyles({
   root: {
     maxWidth: 1200,
-    borderRadius: 10,
   },
   document: {
     height: '85vh',
@@ -25,7 +24,7 @@ const Experiences: React.FC = () => {
       <InfoCard icon={<img className='iconImage' alt='TripAdvisor logo' src='/img/tripadvisor.png'/>} title='TripAdvisor' subtitle='Intern at Experiences Search & Personalization team' location='El Segundo, CA' time='Summer 2019'>
         <List>
           <ListItem>
-            Created personalized navigation links on the home page with 8M daily views; Reduced bounce rate by 2.6\%.
+            Created personalized navigation links on the home page with 8M daily views; Reduced bounce rate by 2.6%.
           </ListItem>
           <ListItem>
             Integrated and A/B tested a new recommendation microservice on product details page.
@@ -35,7 +34,7 @@ const Experiences: React.FC = () => {
           </ListItem>
         </List>
       </InfoCard>
-      <InfoCard icon={<img className='iconImage' alt='TripAdvisor logo' src='/img/risk-sciences.png'/>} title='TripAdvisor' location='El Segundo, CA' time='Summer 2019'>
+      <InfoCard icon={<img className='iconImage' alt='Risk Sciences logo' src='/img/risk-sciences.png'/>} title='The B. John Garrick Institute for the Risk Sciences at UCLA' subtitle='Part-time Software Engineer' location='Los Angeles, CA' time='Dec 2018 - Jun 2019'>
         <List>
           <ListItem>
             Created a responsive sidebar and search UI in React for probabilistic risk assessment web applications.
@@ -44,7 +43,7 @@ const Experiences: React.FC = () => {
             Developed model quantification and full-text search API in Django.
           </ListItem>
           <ListItem>
-            Reduced production crashes by 44\% by deploying Sentry full-stack error tracking.
+            Reduced production crashes by 44% by deploying Sentry full-stack error tracking.
           </ListItem>
         </List>
       </InfoCard>

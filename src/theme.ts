@@ -16,3 +16,6 @@ export const monospaceFontFamily = [
   'Ubuntu Mono',
   'monospace',
 ].join(',');
+
+export const cardShadowSize = 5;
+export const cardBorderRadius = 15;

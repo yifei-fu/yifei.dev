@@ -16,16 +16,26 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
   },
   avatar: {
-    marginRight: theme.spacing(1),
+    marginRight: theme.spacing(1.25),
   },
   left: {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
+    paddingRight: theme.spacing(2),
   },
   divider: {
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
+  },
+  iconText: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  icon: {
+    marginRight: theme.spacing(0.5),
+    marginBottom: theme.spacing(0.25),
   },
 }));
 
@@ -47,27 +57,25 @@ const InfoCard: React.FC<Props> = (props: Props) => {
         <div className={classes.header}>
           <div className={classes.left}>
             <Avatar className={classes.avatar}>{icon}</Avatar>
-            <Typography variant='h5'>
-              {title}
-            </Typography>
-            {
-              subtitle && (
-                <>
-                  <br/>
+            <div>
+              <Typography variant='h5'>
+                {title}
+              </Typography>
+              {
+                subtitle && (
                   <Typography variant='body1'>
                     {subtitle}
                   </Typography>
-                </>
                 )
-            }
+              }
+            </div>
           </div>
           <Typography variant='body2' color='textSecondary' component='p'>
             {time && (
-              <><DateRangeIcon/> {time}</>
+              <div className={classes.iconText}><DateRangeIcon className={classes.icon}/> {time}</div>
             )}
-            <br/>
             {time && (
-              <><LocationOnIcon/> {location}</>
+              <div className={classes.iconText}><LocationOnIcon className={classes.icon}/> {location}</div>
             )}
           </Typography>
         </div>

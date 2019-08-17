@@ -1,33 +1,53 @@
 .App {
-  text-align: center;
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(238,238,238,1) 100%);
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.word {
+  animation-duration: 3s;
+  animation-name: slidein;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.slidingVertical{
+  display: inline;
+}
+.slidingVertical h3{
+  animation: topToBottom 8s linear infinite 0s;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+}
+.slidingVertical h3:nth-child(2){
+  animation-delay: 1.5s;
+}
+.slidingVertical h3:nth-child(3){
+  animation-delay: 3s;
+}
+@keyframes topToBottom{
+  0% { opacity: 0; }
+  5% { opacity: 0; transform: translateY(-10px); }
+  10% { opacity: 1; transform: translateY(0px); }
+  25% { opacity: 1; transform: translateY(0px); }
+  30% { opacity: 0; transform: translateY(10px); }
+  80% { opacity: 0; }
+  100% { opacity: 0; }
 }
 
-.App-link {
-  color: #61dafb;
+.iconImage{
+  width: 30px;
+  height: 30px;
 }
 
-@keyframes App-logo-spin {
+.backgroundGradient{
+  background-color: #2a2a72;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23FFFFFF' fill-opacity='0.04' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+}
+
+@keyframes blink {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
 }

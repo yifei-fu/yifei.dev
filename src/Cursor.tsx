@@ -12,6 +12,7 @@ const useStyles = makeStyles({
     width: '1rem',
     backgroundColor: 'white',
     animation: 'blink 0.5s ease alternate infinite',
+    boxShadow: '0px 0px 10px 2px rgba(255,255,255,0.1)',
   },
 });
 

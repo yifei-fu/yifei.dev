@@ -1,7 +1,9 @@
 import {Button, createMuiTheme} from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import indigo from '@material-ui/core/colors/indigo';
+import cyan from '@material-ui/core/colors/teal';
+import {makeStyles} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import { ThemeProvider } from '@material-ui/styles';
+import {ThemeProvider} from '@material-ui/styles';
 import React from 'react';
 import './App.css';
 import Cursor from './Cursor';
@@ -11,11 +13,17 @@ import Typewriter from './Typewriter';
 const headerTheme = createMuiTheme({
   palette: {
     type: 'dark',
+    primary: {
+      light: indigo.A200,
+      main: indigo.A400,
+      dark: indigo.A700,
+      contrastText: '#fff',
+    },
   },
   typography: {
     fontFamily: titleFontFamily,
     button: {
-      fontSize: '1rem',
+      fontSize: '1.2rem',
     },
   },
 });
@@ -50,12 +58,13 @@ const useStyles = makeStyles({
   button: {
     width: 200,
     height: 75,
-    marginRight: 20,
+    marginRight: 50,
     marginTop: 20,
+    borderRadius: 10,
   },
   code: {
     fontFamily: monospaceFontFamily,
-    color: 'cyan',
+    color: cyan.A100,
   },
 });
 
@@ -78,8 +87,12 @@ const Header: React.FC = () => {
             Looking for a full-time SDE position starting Jan 2020.
           </Typography>
           <div className={classes.buttons}>
-            <Button className={classes.button} color='primary' variant='contained'>Resume</Button>
-            <Button className={classes.button} color='default' variant='outlined'>Projects</Button>
+            <Button className={classes.button} style={{
+              boxShadow: '0px 0px 16px 5px rgba(61,90,254,0.8)',
+            }} color='primary' variant='contained'>Resume</Button>
+            <Button className={classes.button} style={{
+              boxShadow: '0px 0px 16px 5px rgba(255,255,255,0.04)',
+            }} color='default' variant='outlined'>Projects</Button>
           </div>
         </div>
       </div>

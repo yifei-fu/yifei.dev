@@ -1,8 +1,9 @@
 import {Button, createMuiTheme} from '@material-ui/core';
+import cyan from '@material-ui/core/colors/cyan';
 import indigo from '@material-ui/core/colors/indigo';
-import cyan from '@material-ui/core/colors/teal';
 import {makeStyles} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+import KeyboardArrowDownRoundedIcon from '@material-ui/icons/KeyboardArrowDownRounded';
 import {ThemeProvider} from '@material-ui/styles';
 import React from 'react';
 import './App.css';
@@ -33,7 +34,6 @@ const useStyles = makeStyles({
     height: '100vh',
     padding: '30px',
     paddingTop: '10vh',
-    marginBottom: 50,
   },
   container: {
     maxWidth: 800,
@@ -60,11 +60,19 @@ const useStyles = makeStyles({
     height: 75,
     marginRight: 50,
     marginTop: 20,
-    borderRadius: 10,
   },
   code: {
     fontFamily: monospaceFontFamily,
-    color: cyan.A100,
+    color: cyan.A200,
+  },
+  moreArrow: {
+    position: 'absolute',
+    margin: '0 auto',
+    left: 0,
+    right: 0,
+    bottom: 10,
+    color: 'white',
+    fontSize: '4rem',
   },
 });
 
@@ -72,7 +80,7 @@ const Header: React.FC = () => {
   const classes = useStyles();
   return (
     <ThemeProvider theme={headerTheme}>
-      <div className={classes.root + ' backgroundGradient'}>
+      <div className={classes.root + ' gradientWithPattern'}>
         <div className={classes.container}>
           <Typography className={classes.text} style={{fontWeight: 500}} variant='h1'>
             Yifei Fu
@@ -95,6 +103,7 @@ const Header: React.FC = () => {
             }} color='default' variant='outlined'>Projects</Button>
           </div>
         </div>
+        <KeyboardArrowDownRoundedIcon className={classes.moreArrow} />
       </div>
     </ThemeProvider>
   );

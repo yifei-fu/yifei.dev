@@ -11,17 +11,19 @@ import logo from './logo.svg';
 import Resume from './Resume';
 import Section from './Section';
 import Skills from './Skills';
+import {bodyFontFamily, titleFontFamily} from './theme';
 
-const theme = createMuiTheme({
+export const theme = createMuiTheme({
   palette: {
   },
   typography: {
-    fontFamily: [
-      'Oxygen',
-      'Helvetica',
-      'Arial',
-      'sans-serif',
-    ].join(','),
+    fontFamily: titleFontFamily,
+    body1: {
+      fontFamily: bodyFontFamily,
+    },
+    body2: {
+      fontFamily: bodyFontFamily,
+    },
   },
 });
 

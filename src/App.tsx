@@ -4,6 +4,7 @@ import React from 'react';
 import './App.css';
 import Education from './Education';
 import Experiences from './Experiences';
+import Footer from './Footer';
 import Header from './Header';
 import Projects from './Projects';
 import Skills from './Skills';
@@ -67,6 +68,7 @@ const App: React.FC = () => {
           <Skills/>
         </div>
         <Projects/>
+        <Footer/>
       </div>
     </ThemeProvider>
   );

@@ -1,6 +1,5 @@
-import {Button, createMuiTheme} from '@material-ui/core';
+import {Button} from '@material-ui/core';
 import cyan from '@material-ui/core/colors/cyan';
-import indigo from '@material-ui/core/colors/indigo';
 import {makeStyles} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import KeyboardArrowDownRoundedIcon from '@material-ui/icons/KeyboardArrowDownRounded';
@@ -8,26 +7,8 @@ import {ThemeProvider} from '@material-ui/styles';
 import React from 'react';
 import './App.css';
 import Cursor from './Cursor';
-import {monospaceFontFamily, titleFontFamily} from './theme';
+import {darkTheme, monospaceFontFamily} from './theme';
 import Typewriter from './Typewriter';
-
-const headerTheme = createMuiTheme({
-  palette: {
-    type: 'dark',
-    primary: {
-      light: indigo.A200,
-      main: indigo.A400,
-      dark: indigo.A700,
-      contrastText: '#fff',
-    },
-  },
-  typography: {
-    fontFamily: titleFontFamily,
-    button: {
-      fontSize: '1.2rem',
-    },
-  },
-});
 
 const useStyles = makeStyles({
   root: {
@@ -79,10 +60,10 @@ const useStyles = makeStyles({
 const Header: React.FC = () => {
   const classes = useStyles();
   return (
-    <ThemeProvider theme={headerTheme}>
+    <ThemeProvider theme={darkTheme}>
       <div className={classes.root + ' gradientWithPattern'}>
         <div className={classes.container}>
-          <Typography className={classes.text} style={{fontWeight: 500}} variant='h1'>
+          <Typography className={classes.text} variant='h1'>
             Yifei Fu
           </Typography>
           <div>

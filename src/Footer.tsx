@@ -18,6 +18,10 @@ const useStyles = makeStyles({
     marginRight: 'auto',
     marginTop: 10,
   },
+  buttons: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
 });
 
 const Footer: React.FC = () => {
@@ -28,7 +32,7 @@ const Footer: React.FC = () => {
         <Typography className={classes.item} variant='h5'>
           Yifei Fu, 2019
         </Typography>
-        <SocialButtons/>
+        <SocialButtons className={classes.buttons}/>
       </div>
     </ThemeProvider>
   );

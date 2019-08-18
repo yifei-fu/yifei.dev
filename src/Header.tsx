@@ -7,6 +7,7 @@ import {ThemeProvider} from '@material-ui/styles';
 import React from 'react';
 import './App.css';
 import Cursor from './Cursor';
+import SocialButtons from './Social/SocialButtons';
 import {darkTheme, monospaceFontFamily} from './theme';
 import Typewriter from './Typewriter';
 
@@ -55,6 +56,11 @@ const useStyles = makeStyles({
     color: 'white',
     fontSize: '4rem',
   },
+  socialButtons: {
+    position: 'absolute',
+    right: 0,
+    top: 0,
+  },
 });
 
 const Header: React.FC = () => {
@@ -85,6 +91,7 @@ const Header: React.FC = () => {
           </div>
         </div>
         <KeyboardArrowDownRoundedIcon className={classes.moreArrow} />
+        <SocialButtons className={classes.socialButtons} />
       </div>
     </ThemeProvider>
   );

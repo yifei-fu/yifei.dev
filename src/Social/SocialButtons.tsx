@@ -4,22 +4,20 @@ import React, {useEffect, useState} from 'react';
 import {socialLinks} from './social';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    marginLeft: 'auto',
-    marginRight: 'auto',
-  },
   button: {
     margin: 20,
   },
 }));
 
 export interface Props {
+  className?: string;
 }
 
 const SocialButtons: React.FC<Props> = (props: Props) => {
   const classes = useStyles();
+  const {className} = props;
   return (
-    <div className={classes.root}>
+    <div className={className}>
       {socialLinks.map((socialLink, idx) => (
         <IconButton href={socialLink.url} key={idx} className={classes.button} aria-label={socialLink.name}>
           {socialLink.icon}

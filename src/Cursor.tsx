@@ -1,8 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
 import React from 'react';
 import './App.css';
-import Typewriter from './Typewriter';
 
 const useStyles = makeStyles({
   root: {

@@ -1,20 +1,17 @@
-import {Button, createMuiTheme, CssBaseline, makeStyles} from '@material-ui/core';
-import {Edit} from '@material-ui/icons';
+import {createMuiTheme, CssBaseline, makeStyles} from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/styles';
 import React from 'react';
 import './App.css';
-import SimpleAppBar from './AppBar';
 import Education from './Education';
 import Experiences from './Experiences';
 import Header from './Header';
-import logo from './logo.svg';
-import Resume from './Resume';
-import Section from './Section';
+import Projects from './Projects';
 import Skills from './Skills';
 import {bodyFontFamily, titleFontFamily} from './theme';
 
 export const theme = createMuiTheme({
   palette: {
+
   },
   typography: {
     fontFamily: titleFontFamily,

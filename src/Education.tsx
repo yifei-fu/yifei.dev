@@ -1,5 +1,4 @@
-import {Avatar, Typography} from '@material-ui/core';
-import Card from '@material-ui/core/Card';
+import {Typography} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
 import SchoolIcon from '@material-ui/icons/School';
 import React from 'react';

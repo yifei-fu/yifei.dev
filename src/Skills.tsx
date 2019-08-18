@@ -1,4 +1,4 @@
-import {CardContent, Chip} from '@material-ui/core';
+import {CardContent} from '@material-ui/core';
 import Avatar from '@material-ui/core/Avatar';
 import Card from '@material-ui/core/Card';
 import Divider from '@material-ui/core/Divider';
@@ -7,9 +7,9 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import ListItemText from '@material-ui/core/ListItemText';
 import {makeStyles} from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
 import React from 'react';
 import Section from './Section';
+import Tags from './Tags';
 import {bodyFontFamily, cardBorderRadius, cardShadowSize} from './theme';
 
 const useStyles = makeStyles((theme) => ({
@@ -28,20 +28,10 @@ const useStyles = makeStyles((theme) => ({
   inline: {
     display: 'inline',
   },
-  chip: {
-    marginTop: theme.spacing(0.5),
-    marginRight: theme.spacing(0.5),
-  },
 }));
 
 const Skills: React.FC = () => {
   const classes = useStyles();
-
-  const renderTags = (tags: string[]) => (
-    <>
-      {tags.map((tag, idx) => <Chip className={classes.chip} key={idx} variant='outlined' color='primary' label={tag}/>)}
-    </>
-  );
 
   const renderListItem = (avatar: React.ReactNode, title: string, tags: string[]) => (
     <ListItem alignItems='flex-start'>
@@ -51,7 +41,7 @@ const Skills: React.FC = () => {
       <ListItemText
         primary={title}
         secondary={
-          renderTags(tags)
+          <Tags tags={tags}/>
         }
       />
     </ListItem>

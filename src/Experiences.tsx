@@ -1,7 +1,5 @@
-import {Avatar, List, ListItem} from '@material-ui/core';
-import Card from '@material-ui/core/Card';
+import {List, ListItem} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
-import SchoolIcon from '@material-ui/icons/School';
 import React from 'react';
 import InfoCard from './InfoCard';
 import Section from './Section';
@@ -30,7 +28,7 @@ const Experiences: React.FC = () => {
             Integrated and A/B tested a new recommendation microservice on product details page.
           </ListItem>
           <ListItem>
-            Improved Solr schema for product search index and migrated 241K documents to enable faceted query.
+            Improved Solr schema for product search index and migrated 4.1M documents to enable faceted query.
           </ListItem>
         </List>
       </InfoCard>

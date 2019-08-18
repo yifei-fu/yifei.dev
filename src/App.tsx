@@ -59,7 +59,7 @@ const App: React.FC = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <div className='App'>
-        <SimpleAppBar/>
+        {/*<SimpleAppBar/>*/}
         <Header/>
         {/*<div className={classes.buttons}>*/}
           {/*{['Info', 'Projects', 'Contacts'].map(name => <Button className={classes.button}>{name}</Button>)}*/}
@@ -69,7 +69,7 @@ const App: React.FC = () => {
           <Experiences/>
           <Skills/>
         </div>
-        <div style={{height: 1200}}/>
+        <Projects/>
       </div>
     </ThemeProvider>
   );

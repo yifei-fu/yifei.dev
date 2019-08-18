@@ -3,6 +3,7 @@ import Typography from '@material-ui/core/Typography';
 import {ThemeProvider} from '@material-ui/styles';
 import React from 'react';
 import './App.css';
+import SocialButtons from './Social/SocialButtons';
 import {darkTheme} from './theme';
 
 const useStyles = makeStyles({
@@ -27,6 +28,7 @@ const Footer: React.FC = () => {
         <Typography className={classes.item} variant='h5'>
           Yifei Fu, 2019
         </Typography>
+        <SocialButtons/>
       </div>
     </ThemeProvider>
   );

@@ -60,3 +60,8 @@ a {
     opacity: 1;
   }
 }
+
+.iconButton {
+  width: 24px;
+  height: 24px;
+}

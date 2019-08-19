@@ -18,8 +18,8 @@ const useStyles = makeStyles({
 const Experiences: React.FC = () => {
   const classes = useStyles();
   return (
-    <Section className={classes.root} title='Experiences'>
-      <InfoCard icon={<img className='iconImage' alt='TripAdvisor logo' src='/img/tripadvisor.png'/>} title='TripAdvisor' subtitle='Intern at Experiences Search & Personalization team' location='El Segundo, CA' time='Summer 2019'>
+    <Section className={classes.root} title='Work Experience'>
+      <InfoCard icon={<img className='iconImage' alt='TripAdvisor logo' src='/img/tripadvisor.png'/>} title='TripAdvisor' subtitle='SDE Intern at Experiences Search & Personalization team' location='El Segundo, CA' time='Summer 2019'>
         <List>
           <ListItem>
             Created personalized navigation links on the home page with 8M daily views; Reduced bounce rate by 2.6%.
@@ -41,7 +41,7 @@ const Experiences: React.FC = () => {
             Developed model quantification and full-text search API in Django.
           </ListItem>
           <ListItem>
-            Reduced production crashes by 44% by deploying Sentry full-stack error tracking.
+            Reduced production crashes by 44% by deploying Sentry error tracking.
           </ListItem>
         </List>
       </InfoCard>

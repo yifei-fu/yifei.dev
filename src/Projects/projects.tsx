@@ -24,7 +24,7 @@ export const projects = [
           Led a team of six to rapidly develop a full-stack web app with Scrum.
         </Typography>
         <Typography variant='body1'>
-          Designed a <a href='https://app.swaggerhub.com/apis-docs/yifei-fu/InQuizitive/1.0.0'>Swagger API documentation</a> for better coordination between frontend and backend teams.
+          Designed a <a href='https://app.swaggerhub.com/apis-docs/yifei-fu/InQuizitive/1.0.0'>Swagger API documentation</a> for better team coordination.
         </Typography>
         <Typography variant='body1'>
           Developed a responsive frontend with real-time data and push notifications.

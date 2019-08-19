@@ -9,11 +9,6 @@ const useStyles = makeStyles({
   root: {
     maxWidth: 800,
   },
-  document: {
-    height: '85vh',
-    width: '90vw',
-    border: 'none',
-  },
 });
 
 const Education: React.FC = () => {

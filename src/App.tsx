@@ -1,6 +1,6 @@
 import {createMuiTheme, CssBaseline, makeStyles} from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/styles';
-import React, {useRef, useState} from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Education from './Education';
 import Experiences from './Experiences';
@@ -8,22 +8,7 @@ import Footer from './Footer';
 import Header from './Header';
 import Projects from './Projects';
 import Skills from './Skills';
-import {bodyFontFamily, titleFontFamily} from './theme';
-
-export const theme = createMuiTheme({
-  palette: {
-
-  },
-  typography: {
-    fontFamily: titleFontFamily,
-    body1: {
-      fontFamily: bodyFontFamily,
-    },
-    body2: {
-      fontFamily: bodyFontFamily,
-    },
-  },
-});
+import {theme} from './theme';
 
 const useStyles = makeStyles({
   buttons: {

@@ -3,7 +3,7 @@ import Typography from '@material-ui/core/Typography';
 import React from 'react';
 
 const useStyles = makeStyles({
-  header: {
+  title: {
     marginTop: 30,
     marginBottom: 10,
     textAlign: 'center',
@@ -21,7 +21,7 @@ const Section: React.FC<Props> = (props: Props) => {
   const classes = useStyles();
   return (
     <div className={className}>
-      <Typography className={classes.header} variant='h4'>
+      <Typography className={classes.title} variant='h4'>
         {title}
       </Typography>
       {children}

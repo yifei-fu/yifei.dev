@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     marginRight: theme.spacing(1.25),
-    background: theme.palette.primary.main,
+    background: theme.palette.primary.dark,
   },
   left: {
     display: 'flex',

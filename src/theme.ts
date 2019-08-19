@@ -1,4 +1,5 @@
 import {createMuiTheme} from '@material-ui/core';
+import blue from '@material-ui/core/colors/blue';
 import indigo from '@material-ui/core/colors/indigo';
 
 export const titleFontFamily = [
@@ -22,6 +23,26 @@ export const monospaceFontFamily = [
 
 export const cardShadowSize = 5;
 export const cardBorderRadius = 15;
+
+export const theme = createMuiTheme({
+  palette: {
+    primary: {
+      light: blue.A200,
+      main: blue.A400,
+      dark: blue.A700,
+      contrastText: '#fff',
+    },
+  },
+  typography: {
+    fontFamily: titleFontFamily,
+    body1: {
+      fontFamily: bodyFontFamily,
+    },
+    body2: {
+      fontFamily: bodyFontFamily,
+    },
+  },
+});
 
 export const darkTheme = createMuiTheme({
   palette: {

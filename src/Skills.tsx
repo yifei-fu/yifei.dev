@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'inline',
   },
   avatar: {
-    background: theme.palette.primary.main,
+    background: theme.palette.primary.dark,
   },
 }));
 

@@ -35,7 +35,7 @@ export const projects = [
       </>
 
     ),
-    imageURLs: ['img/inquizitive-1.png', 'img/inquizitive-2.png', 'img/inquizitive-3.png'],
+    imageURLs: ['img/inquizitive-1.jpg', 'img/inquizitive-2.jpg', 'img/inquizitive-3.jpg'],
     links: [
       {
         display: 'Repo',
@@ -58,7 +58,7 @@ export const projects = [
       </>
 
     ),
-    imageURLs: ['img/quickey-1.png'],
+    imageURLs: ['img/quickey-1.jpg'],
     links: [
       {
         display: 'Visit',

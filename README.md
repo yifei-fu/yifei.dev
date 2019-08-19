@@ -1,3 +1,10 @@
+# [yifei.dev](https://yifei.dev)
+Personal website.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ff00e543-8788-401b-b748-f414c8270b1c/deploy-status)](https://app.netlify.com/sites/vigorous-dubinsky-9c8bdc/deploys)
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

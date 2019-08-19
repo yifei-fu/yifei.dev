@@ -63,8 +63,14 @@ const useStyles = makeStyles({
   },
 });
 
-const Header: React.FC = () => {
+export interface Props {
+  scrollToProjects: () => void;
+}
+
+const Header: React.FC<Props> = (props: Props) => {
   const classes = useStyles();
+  const {scrollToProjects} = props;
+
   return (
     <ThemeProvider theme={darkTheme}>
       <div className={classes.root + ' gradientWithPattern'}>
@@ -82,16 +88,32 @@ const Header: React.FC = () => {
             Looking for a full-time SDE position starting Jan 2020.
           </Typography>
           <div className={classes.buttons}>
-            <Button className={classes.button} style={{
-              boxShadow: '0px 0px 16px 5px rgba(61,90,254,0.8)',
-            }} color='primary' variant='contained'>Resume</Button>
-            <Button className={classes.button} style={{
-              boxShadow: '0px 0px 16px 5px rgba(255,255,255,0.04)',
-            }} color='default' variant='outlined'>Projects</Button>
+            <Button
+              className={classes.button}
+              style={{
+                boxShadow: '0px 0px 16px 5px rgba(61,90,254,0.8)',
+              }}
+              color='primary'
+              variant='contained'
+              href='/resume-web.pdf'
+            >
+              Resume
+            </Button>
+            <Button
+              className={classes.button}
+              style={{
+                boxShadow: '0px 0px 16px 5px rgba(255,255,255,0.04)',
+              }}
+              color='default'
+              variant='outlined'
+              onClick={scrollToProjects}
+            >
+              Projects
+            </Button>
           </div>
         </div>
-        <KeyboardArrowDownRoundedIcon className={classes.moreArrow} />
-        <SocialButtons className={classes.socialButtons} />
+        <KeyboardArrowDownRoundedIcon className={classes.moreArrow}/>
+        <SocialButtons className={classes.socialButtons}/>
       </div>
     </ThemeProvider>
   );

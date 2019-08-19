@@ -1,6 +1,6 @@
 import {Grid} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
-import React, {useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 import Section from '../Section';
 import ProjectInfo from './ProjectInfo';
 import ProjectMedia from './ProjectMedia';
@@ -19,9 +19,23 @@ const useStyles = makeStyles({
   },
 });
 
-const Projects: React.FC = () => {
+export interface Props {
+  setScrollToProjects: any;
+}
+
+const Projects: React.FC<Props> = (props: Props) => {
   const classes = useStyles();
+  const {setScrollToProjects} = props;
   const projectInfoRef = useRef<HTMLDivElement>(null);
+
+  const scrollToProjects = () => {
+    if (projectInfoRef && projectInfoRef.current) {
+      projectInfoRef.current.scrollIntoView({behavior: 'smooth'});
+    }
+  };
+  useEffect(() => {
+    setScrollToProjects(() => scrollToProjects);
+  }, []);
 
   return (
     <Section className={classes.root} title='Projects'>

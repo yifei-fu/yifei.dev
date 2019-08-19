@@ -1,6 +1,6 @@
 import {createMuiTheme, CssBaseline, makeStyles} from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/styles';
-import React from 'react';
+import React, {useRef, useState} from 'react';
 import './App.css';
 import Education from './Education';
 import Experiences from './Experiences';
@@ -52,13 +52,13 @@ const useStyles = makeStyles({
 
 const App: React.FC = () => {
   const classes = useStyles();
-
+  const [scrollToProjects, setScrollToProjects] = useState<() => void>(() => {});
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <div className='App'>
         {/*<SimpleAppBar/>*/}
-        <Header/>
+        <Header scrollToProjects={scrollToProjects}/>
         {/*<div className={classes.buttons}>*/}
           {/*{['Info', 'Projects', 'Contacts'].map(name => <Button className={classes.button}>{name}</Button>)}*/}
         {/*</div>*/}
@@ -67,7 +67,7 @@ const App: React.FC = () => {
           <Experiences/>
           <Skills/>
         </div>
-        <Projects/>
+        <Projects setScrollToProjects={setScrollToProjects}/>
         <Footer/>
       </div>
     </ThemeProvider>

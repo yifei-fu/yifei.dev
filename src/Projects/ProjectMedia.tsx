@@ -41,7 +41,6 @@ const ProjectMedia: React.FC<Props> = (props: Props) => {
       if (projectInfoRef.current) {
         const newCurrentProjectIndex = Math.min(projects.length - 1, Math.max(0, Math.round((window.scrollY - projectInfoRef.current.offsetTop) / window.innerHeight)));
         setCurrentProjectIndex(newCurrentProjectIndex);
-        console.log(newCurrentProjectIndex);
       }
     });
   }, []);

@@ -74,14 +74,20 @@ const InfoCard: React.FC<Props> = (props: Props) => {
               }
             </div>
           </div>
-          <Typography variant='body2' color='textSecondary' component='p'>
+          <div>
             {time && (
-              <div className={classes.iconText}><DateRangeIcon className={classes.icon}/> {time}</div>
+              <div className={classes.iconText}>
+                <DateRangeIcon className={classes.icon}/>
+                <Typography variant='body2' color='textSecondary'>{time}</Typography>
+              </div>
             )}
-            {time && (
-              <div className={classes.iconText}><LocationOnIcon className={classes.icon}/> {location}</div>
+            {location && (
+              <div className={classes.iconText}>
+                <LocationOnIcon className={classes.icon}/>
+                <Typography variant='body2' color='textSecondary'>{location}</Typography>
+              </div>
             )}
-          </Typography>
+          </div>
         </div>
         <Divider className={classes.divider}/>
         {children}

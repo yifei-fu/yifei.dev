@@ -18,9 +18,9 @@ const Tags: React.FC<Props> = (props: Props) => {
   const {tags} = props;
 
   return (
-    <>
+    <div>
       {tags.map((tag, idx) => <Chip className={classes.chip} key={idx} variant='outlined' color='primary' label={tag}/>)}
-    </>
+    </div>
   );
 };
 

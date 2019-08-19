@@ -43,6 +43,7 @@ const Skills: React.FC = () => {
         {avatar}
       </ListItemAvatar>
       <ListItemText
+        disableTypography
         primary={title}
         secondary={
           <Tags tags={tags}/>

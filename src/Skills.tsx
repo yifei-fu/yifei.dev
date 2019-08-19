@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
   card: {
     borderRadius: cardBorderRadius,
     boxShadow: theme.shadows[cardShadowSize],
+    margin: 15,
   },
   document: {
     height: '85vh',
@@ -27,6 +28,9 @@ const useStyles = makeStyles((theme) => ({
   },
   inline: {
     display: 'inline',
+  },
+  avatar: {
+    background: theme.palette.primary.main,
   },
 }));
 
@@ -53,7 +57,7 @@ const Skills: React.FC = () => {
         <CardContent>
           <List className={classes.root}>
             {renderListItem(
-              <Avatar alt='Lambda' style={{fontSize: '2rem', fontFamily: bodyFontFamily}}>
+              <Avatar alt='Lambda' className={classes.avatar} style={{fontSize: '2rem', fontFamily: bodyFontFamily}}>
                 λ
               </Avatar>,
               'Programming Languages',
@@ -61,7 +65,7 @@ const Skills: React.FC = () => {
             )}
             <Divider variant='inset' component='li' />
             {renderListItem(
-              <Avatar>
+              <Avatar className={classes.avatar}>
                 <img className='iconImage' alt='Frontend Development' src='/img/monitor.png'/>
               </Avatar>,
               'Frontend Web Development',
@@ -69,7 +73,7 @@ const Skills: React.FC = () => {
             )}
             <Divider variant='inset' component='li' />
             {renderListItem(
-              <Avatar>
+              <Avatar className={classes.avatar}>
                 <img className='iconImage' alt='Frontend Development' src='/img/server.png'/>
               </Avatar>,
               'Backend Web Development',
@@ -77,7 +81,7 @@ const Skills: React.FC = () => {
             )}
             <Divider variant='inset' component='li' />
             {renderListItem(
-              <Avatar>
+              <Avatar className={classes.avatar}>
                 <img className='iconImage' alt='Frontend Development' src='/img/database.png'/>
               </Avatar>,
               'Databases',
@@ -85,7 +89,7 @@ const Skills: React.FC = () => {
             )}
             <Divider variant='inset' component='li' />
             {renderListItem(
-              <Avatar>
+              <Avatar className={classes.avatar}>
                 <img className='iconImage' alt='Frontend Development' src='/img/devops.png'/>
               </Avatar>,
               'DevOps & Others',

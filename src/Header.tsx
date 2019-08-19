@@ -54,6 +54,7 @@ const useStyles = makeStyles({
     right: 0,
     bottom: 10,
     color: 'white',
+    opacity: 0.9,
     fontSize: '4rem',
   },
   socialButtons: {

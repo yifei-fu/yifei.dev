@@ -48,7 +48,7 @@ const ProjectMedia: React.FC<Props> = (props: Props) => {
     <div className={classes.root}>
       <div className={classes.container}>
         {projects[currentProjectIndex].imageURLs.map((url, idx) => (
-          <img className={classes.image} key={idx} src={url} alt={'Project showcase'} />
+          <img className={classes.image} key={`${currentProjectIndex}-${idx}`} src={url} alt={'Project showcase'} />
         ))}
       </div>
     </div>
